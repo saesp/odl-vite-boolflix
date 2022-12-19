@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-  <MoviesList :msg="store.title" />
+  <MoviesList />
 
   <main>
 
