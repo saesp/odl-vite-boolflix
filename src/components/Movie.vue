@@ -10,8 +10,11 @@ export default {
 
 <template>
     <div>
+        <h3>{{ info.title }}</h3>
         <img :src="`https://image.tmdb.org/t/p/w200/${info.poster_path}`" alt="">
-        <div>{{ info.id }}</div>
+        <div>{{ info.original_title }}</div>
+        <div>{{ info.original_language }}</div>
+        <div>{{ info.vote_average }}</div>
     </div>
 </template>
 
