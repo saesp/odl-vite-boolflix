@@ -54,5 +54,8 @@ export default {
 </template>
 
 <style lang="scss">
-// @use './style/general.scss'
+// @use '../style.scss' as *;
+// main {
+//   text-align: -webkit-center;
+// }
 </style>
