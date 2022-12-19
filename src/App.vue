@@ -17,21 +17,21 @@ export default {
 
   methods: {
     getMovies() {
+      // apiUserURL = store.apiURL;
+
       axios
         .get(store.apiURL)
         .then(res => {
           store.moviesList = res.data.results;
         })
         .catch(err => {
-          console.log("Errori", err);
-        })
-    },
+          console.log("Errors", err);
+        });
 
-    toSearch() {
       if (this.store.valueSearch !== "") {
-        this.store.apiURL = `"https://api.themoviedb.org/3/search/movie?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}"`
+        store.apiURL = `https://api.themoviedb.org/3/search/movie?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}`
       };
-    }
+    },
   },
 
   mounted() {
@@ -42,7 +42,7 @@ export default {
 
 <template>
   <main>
-    <MoviesList @search="toSearch" />
+    <MoviesList @search="getMovies" />
   </main>
 </template>
 
