@@ -31,6 +31,7 @@ export default {
 .container-movies {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .movie {
         width: calc(100% / 5 - 30px);
