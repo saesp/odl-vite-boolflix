@@ -25,7 +25,6 @@ export default {
             <Movie :info="movie" />
         </div>
     </div>
-
 </template>
 
 <style lang="scss" scoped>
@@ -34,7 +33,8 @@ export default {
     flex-wrap: wrap;
 
     .movie {
-        width: calc(100% / 5);
+        width: calc(100% / 5 - 30px);
+        margin: 15px;
     }
 }
 </style>
