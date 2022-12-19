@@ -68,8 +68,8 @@ header {
   padding: 30px 80px;
 }
 
-// main {
-//   text-align: -webkit-center;
-// }
+main {
+  padding: 0 70px;
+}
 </style>
 \

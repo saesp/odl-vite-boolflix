@@ -17,7 +17,8 @@ export default {
 </script>
 
 <template>
-    <div class="container-movies">
+    <h3 v-if="this.store.valueSearch == ''">I più popolari</h3>
+    <div class=" container-movies">
         <div class="movie" v-for="(movie, index) in store.moviesList" :key="index">
             <Movie :info="movie" />
         </div>
@@ -31,11 +32,14 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 70px;
 
     .movie {
         width: calc(100% / 6 - 20px);
         margin: 10px;
     }
+}
+
+h3 {
+    margin: 0 10px;
 }
 </style>

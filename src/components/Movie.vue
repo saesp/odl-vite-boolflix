@@ -11,7 +11,7 @@ export default {
         <img class="img-movie" :src="`https://image.tmdb.org/t/p/w185/${info.poster_path}`" alt="">
 
         <div class="info-movie">
-            <h3><strong>Titolo: </strong> {{ info.title }}</h3>
+            <h4><strong>Titolo: </strong> {{ info.title }}</h4>
 
             <div><strong>Titolo originale: </strong> {{ info.original_title }}</div>
 
