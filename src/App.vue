@@ -1,12 +1,14 @@
 <script>
 import axios from 'axios'
 import MoviesList from './components/MoviesList.vue'
+import AppHeader from './components/AppHeader.vue'
 import { store } from './store.js'
 
 export default {
   name: "App",
   components: {
     MoviesList,
+    AppHeader
   },
 
   data() {
@@ -48,6 +50,10 @@ export default {
 </script>
 
 <template>
+  <header>
+    <AppHeader @search="getMovies" />
+  </header>
+
   <main>
     <MoviesList @search="getMovies" />
   </main>
@@ -55,7 +61,15 @@ export default {
 
 <style lang="scss">
 // @use '../style.scss' as *;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+}
+
 // main {
 //   text-align: -webkit-center;
 // }
 </style>
+\
