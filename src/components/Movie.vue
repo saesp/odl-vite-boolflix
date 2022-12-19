@@ -1,13 +1,14 @@
 <script>
 export default {
     name: "MoviesList",
-    props: [""]
+    props: ["info"]
 }
 </script>
 
 <template>
     <div>
-        <img :src="info.image" alt="">
+        <img :src="info.poster_path" alt="">
+        <div>{{ info.popularity }}</div>
     </div>
 </template>
 

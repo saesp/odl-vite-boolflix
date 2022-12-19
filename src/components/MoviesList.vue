@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <div class="container" v-for="(movie, index) in store.moviesList" :key="movie.index">
+    <div class="container" v-for="(movie, index) in store.moviesList" :key="index">
         <Movie :info="movie" />
     </div>
 </template>
