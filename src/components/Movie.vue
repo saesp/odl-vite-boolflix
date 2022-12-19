@@ -10,19 +10,19 @@ export default {
     <div if="" class="card-movie">
         <img class="img-movie" :src="`https://image.tmdb.org/t/p/w185/${info.poster_path}`" alt="">
 
-        <div class="info-movie">
-            <h4><strong>Titolo: </strong> {{ info.title }}</h4>
+        <ul class="info-movie">
+            <li><strong>Titolo: </strong> "{{ info.title }}"</li>
 
-            <div><strong>Titolo originale: </strong> {{ info.original_title }}</div>
+            <li><strong>Titolo originale: </strong> "{{ info.original_title }}"</li>
 
-            <span>
-                <strong>Lingua originale:</strong> <img class="flag" :src="`/src/img/${info.original_language}.svg`"
+            <li>
+                <strong>Lingua originale: </strong> <img class="flag" :src="`/src/img/${info.original_language}.svg`"
                     alt="">
-            </span>
+            </li>
 
             <!-- round off number and divide by 2 -->
-            <div>{{ Math.round(info.vote_average / 2) }}/5</div>
-        </div>
+            <li><strong>Voto: </strong> {{ Math.round(info.vote_average / 2) }}/5</li>
+        </ul>
     </div>
 
 </template>
@@ -38,7 +38,7 @@ export default {
     }
 
     &:hover .img-movie {
-        opacity: 0.4;
+        opacity: 0.3;
     }
 }
 
@@ -47,7 +47,11 @@ export default {
     position: absolute;
     top: 0;
     left: 4px;
-    padding: 10px;
+    padding: 20px;
+
+    li {
+        margin-bottom: 10px;
+    }
 }
 
 .info-movie {
