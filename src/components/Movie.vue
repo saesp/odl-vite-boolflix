@@ -7,10 +7,10 @@ export default {
 
 <template>
     <div>
-        {{ }}
+        <img :src="info.image" alt="">
     </div>
 </template>
 
 <style lang="scss" scoped>
-@use '../style/general.scss' as *;
+// @use '../style/general.scss' as *;
 </style>

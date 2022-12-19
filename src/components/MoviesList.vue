@@ -1,6 +1,6 @@
 <script>
 import Movie from './Movie.vue'
-import { store } from './store.js'
+import { store } from '../store.js'
 
 export default {
     name: "MoviesList",
@@ -23,5 +23,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style/general.scss' as *;
+
 </style>
