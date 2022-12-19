@@ -1,14 +1,17 @@
 <script>
+import { store } from '../store.js'
+
 export default {
     name: "MoviesList",
-    props: ["info"]
+
+    props: ["info"],
 }
 </script>
 
 <template>
     <div>
-        <img :src="info.poster_path" alt="">
-        <div>{{ info.popularity }}</div>
+        <img :src="`https://image.tmdb.org/t/p/w200/${info.poster_path}`" alt="">
+        <div>{{ info.id }}</div>
     </div>
 </template>
 
