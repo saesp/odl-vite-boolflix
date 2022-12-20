@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
-    width: 100px;
+    width: 150px;
 }
 
 input {

@@ -22,6 +22,8 @@ export default {
 
             <!-- round off number and divide by 2 -->
             <li><strong>Voto: </strong> {{ Math.round(info.vote_average / 2) }}/5</li>
+
+            <li><strong>Overview: </strong>{{ info.overview }}</li>
         </ul>
     </div>
 
@@ -34,31 +36,30 @@ export default {
     cursor: pointer;
 
     &:hover .info-movie {
-        bottom: 0;
-        height: 100%;
-        top: 0;
-        left: 4px;
-        padding: 20px;
+        display: block;
     }
 
     &:hover .img-movie {
-        opacity: 0.3;
+        opacity: 0.2;
     }
 }
 
 .info-movie {
+    display: none;
     position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
+    top: 0;
+    left: 4px;
+    padding: 13px;
 
     li {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        list-style-type: none;
+        font-size: 12px;
     }
+}
+
+.info-movie {
+    display: none;
 }
 
 .img-movie {
