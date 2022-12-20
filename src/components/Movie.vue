@@ -21,7 +21,7 @@ export default {
             </li>
 
             <!-- round off number and divide by 2 -->
-            <li><strong>Voto: </strong> {{ Math.round(info.vote_average / 2) }}/5</li>
+            <li><strong>Voto: </strong><span v-for="num in Math.round(info.vote_average / 2)">&#9733;</span></li>
 
             <li><strong>Overview: </strong>{{ info.overview }}</li>
         </ul>
