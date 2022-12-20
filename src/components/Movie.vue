@@ -38,7 +38,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// @use '../style.scss' as *;
+@use '../style.scss' as *;
+
 .card-movie {
     position: relative;
     cursor: pointer;
@@ -54,6 +55,7 @@ export default {
 
 .info-movie {
     display: none;
+    border: 1px solid $red-neflix;
     position: absolute;
     top: 0;
     left: 0;
