@@ -34,7 +34,11 @@ export default {
     cursor: pointer;
 
     &:hover .info-movie {
-        display: block;
+        bottom: 0;
+        height: 100%;
+        top: 0;
+        left: 4px;
+        padding: 20px;
     }
 
     &:hover .img-movie {
@@ -43,19 +47,18 @@ export default {
 }
 
 .info-movie {
-    display: none;
     position: absolute;
-    top: 0;
-    left: 4px;
-    padding: 20px;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
 
     li {
         margin-bottom: 10px;
     }
-}
-
-.info-movie {
-    display: none;
 }
 
 .img-movie {
