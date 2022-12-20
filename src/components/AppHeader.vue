@@ -16,7 +16,7 @@ export default {
     <img class="logo" src="../img/Logo-Netflix.png" alt="">
     <input placeholder="Cerca" @keyup="$emit('search')" @keydown="$emit('search')" @keyup.enter="$emit('search')"
         v-model="store.valueSearch" type="search">
-    <!-- <button @click="$emit('search')"></button>-->
+    <!-- <button @click="$emit('search')"></button> -->
 </template>
 
 <style lang="scss" scoped>

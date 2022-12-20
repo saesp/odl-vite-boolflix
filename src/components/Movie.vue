@@ -23,11 +23,12 @@ export default {
             <!-- round off number and divide by 2 -->
             <li>
                 <strong>Voto: </strong>
-                <span v-for="num in Math.round(info.vote_average / 2)">&#9733;</span>
+                <span class="yellow-star" v-for="num in Math.round(info.vote_average / 2)">&#9733;</span>
                 <span v-if="Math.round(info.vote_average / 2) === 4">&#9734;</span>
                 <span v-if="Math.round(info.vote_average / 2) === 3">&#9734;&#9734;</span>
                 <span v-if="Math.round(info.vote_average / 2) === 2">&#9734;&#9734;&#9734;</span>
                 <span v-if="Math.round(info.vote_average / 2) === 1">&#9734;&#9734;&#9734;&#9734;</span>
+                <span v-if="Math.round(info.vote_average / 2) === 0">&#9734;&#9734;&#9734;&#9734;&#9734;</span>
             </li>
 
             <li><strong>Overview: </strong>{{ info.overview }}</li>
@@ -55,18 +56,20 @@ export default {
     display: none;
     position: absolute;
     top: 0;
-    left: 4px;
+    left: 0;
     padding: 13px;
+    height: 300px;
+    overflow-y: auto;
 
     li {
         margin-bottom: 8px;
         list-style-type: none;
         font-size: 12px;
-    }
-}
 
-.info-movie {
-    display: none;
+        .yellow-star {
+            color: yellow;
+        }
+    }
 }
 
 .img-movie {

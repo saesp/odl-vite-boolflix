@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <h3 v-if="this.store.valueSearch == ''">I più popolari</h3>
+    <h3 v-if="store.valueSearch == ''">I più popolari</h3>
     <h3 v-else>Cercati da te</h3>
     <div class=" container-movies">
         <div class="movie" v-for="(movie, index) in store.moviesList" :key="index">
